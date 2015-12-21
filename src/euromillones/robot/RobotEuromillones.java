@@ -1,4 +1,4 @@
-package robot;
+package euromillones.robot;
 
 import java.util.List;
 import org.openqa.selenium.By;
