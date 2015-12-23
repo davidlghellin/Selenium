@@ -1,6 +1,4 @@
-package euromillones.principal;
-
-import euromillones.robot.RobotEuromillones;
+package euromillones;
 
 /**
  *

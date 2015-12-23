@@ -1,4 +1,4 @@
-package euromillones.robot;
+package euromillones;
 
 import java.util.List;
 import org.openqa.selenium.By;
@@ -7,8 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
- * Robot que imprime por pantalla los últimos sorteos que hay en la web de
- * Euromillones
+ * Robot obtiene datos de la página del sorteo de los Euromillones
  *
  * @author wizord
  */
