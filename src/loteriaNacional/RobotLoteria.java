@@ -31,13 +31,18 @@ public class RobotLoteria
 
     public void comprobar(int numero, float dinero)
     {
+        // Introducimos el número y la cantidad de dinero en sus respectivos campos
         WebElement n = driver.findElement(By.id("numero"));
         n.sendKeys(numero + "");
         WebElement e = driver.findElement(By.id("cantidad"));
         // Borramos el contenido por defecto de la cantidad
         e.clear();
         e.sendKeys(dinero + "");
-        WebElement div = driver.findElement(By.className("cuerpoRegion"));
+        
+        // Nos posicionamos, para que todo funcione correcto
+        // Si lo quito --> falla
+        driver.findElement(By.className("cuerpoRegion"));
+        
         // Como no tenemos ninguna forma de identificar al botón vamos a hacerlo con el cssSelector a mano:
         // etiqueta con value = 'nombre' 
         // La siguiente forma sería usando xpath --> no me ha funcionado
