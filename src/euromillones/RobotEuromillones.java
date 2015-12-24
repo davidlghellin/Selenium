@@ -99,4 +99,32 @@ public class RobotEuromillones
         }
         return matrix;
     }
+
+    public void pintar(int[][] matrix)
+    {
+        for (int i = 0; i < matrix.length; i++)
+        {
+            for (int j = 0; j < matrix[1].length; j++)
+            {
+                if (j < 5)
+                {
+                    System.out.print("Circulos:  ");
+                }
+                else
+                {
+                    System.out.print("Estrellas: ");
+                }
+                System.out.print(matrix[i][j] + "\t");
+            }
+            System.out.println("");
+        }
+    }
+    
+    public static void main(String[] args)
+    {
+        RobotEuromillones robot = new RobotEuromillones();
+        robot.ir();
+        int[][] m = robot.obternerSemana();
+        robot.pintar(m);
+    }
 }
