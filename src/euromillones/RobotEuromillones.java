@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /**
  * Robot obtiene datos de la página del sorteo de los Euromillones
  *
- * @author wizord
+ * @author David López González
  */
 public class RobotEuromillones
 {

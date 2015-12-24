@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  *
- * @author wizord
+ * @author David López González
  */
 public class RobotLoteriaJS
 {
@@ -29,10 +29,11 @@ public class RobotLoteriaJS
         driver.get(url);
     }
 
-    public void comprobar(int numero, float dinero)
+    public void comprobar(int numero, float dinero) 
     {
         String cargaPag = "$(document).ready( function() {  });";
         js.executeScript(cargaPag);
+        
         String num = "$('#numero')[0].value = '" + numero + "';";
         js.executeScript(num);
 
@@ -41,7 +42,7 @@ public class RobotLoteriaJS
 
         String pulsarBtn = "$(\"input[value='COMPROBAR']\").click()";
         js.executeScript(pulsarBtn);
-
+            
         String text = "return jQuery('.alerta').find('p:first').text();";
         String salida = (String) js.executeScript(text);
         System.out.println(salida);

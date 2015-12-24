@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
- * @author wizord
+ * @author David López González
  */
 public class RobotLoteria
 {
@@ -52,7 +52,7 @@ public class RobotLoteria
         // nos aseguraremos de que esta accesible el mensaje de salida 
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className("alerta"))));
-        System.out.println(driver.findElement(By.className("alerta")).getText());
+        System.out.println(driver.findElement(By.className("alerta")).findElement(By.tagName("p")).getText());
     }
 
     public static void main(String[] args)
