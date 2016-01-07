@@ -50,8 +50,8 @@ public class RobotEuromillonesJS
             System.out.print(">>\t");
             for (int j = 0; j < 2; j++)
             {
-                String nCirculos = "return $('#historicoeuromillones').find(\"ul\").eq(" + i + ").find('.euroestrella').eq(" + j + ").text();";
-                String texto = (String) js.executeScript(nCirculos);
+                String nEstrellas = "return $('#historicoeuromillones').find(\"ul\").eq(" + i + ").find('.euroestrella').eq(" + j + ").text();";
+                String texto = (String) js.executeScript(nEstrellas);
                 System.out.print(texto + "\t");
             }
             System.out.println("");
@@ -69,14 +69,17 @@ public class RobotEuromillonesJS
         {
             for (int j = 0; j < 5; j++)
             {
-                String nCirculos = "return $('#historicoeuromillones').find(\"ul\").eq(" + i + ").find('.eurobola').eq(" + j + ").text();";
+                // String nCirculos = "return $('#historicoeuromillones').find(\"ul\").eq(" + i + ").find('.eurobola').eq(" + j + ").text();";
+                // Más compacto en la selección de los 'eq'
+                String nCirculos = "return $('#historicoeuromillones ul:eq(" + i + ")').find('.eurobola:eq(" + j + ")').text();";
                 String texto = (String) js.executeScript(nCirculos);
                 matrix[i][j] = Integer.parseInt(texto);
             }
             for (int j = 0; j < 2; j++)
             {
-                String nCirculos = "return $('#historicoeuromillones').find(\"ul\").eq(" + i + ").find('.euroestrella').eq(" + j + ").text();";
-                String texto = (String) js.executeScript(nCirculos);
+                //String nEstrellas = "return $('#historicoeuromillones').find(\"ul\").eq(" + i + ").find('.euroestrella').eq(" + j + ").text();";
+                String nEstrellas = "return $('#historicoeuromillones ul:eq(" + i + ")').find('.euroestrella:eq(" + j + ")').text();";
+                String texto = (String) js.executeScript(nEstrellas);
                 matrix[i][5 + j] = Integer.parseInt(texto);
             }
         }

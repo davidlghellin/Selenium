@@ -1,0 +1,20 @@
+Para la selección de un elemento que nos resulte dificil, podemos usar:
+cssSelector, a continuación comentaré brevemente como lo uso.
+
+Tenemos:
+    <button id="idDelBoton" type="button">Enviar</button>
+Lo pulsaremos:
+    driver.findElement(By.cssSelector("#idDelBoton")).click();
+
+Selecionaremos por medio de atributos del elemento
+Tenemos:
+    <input type="text" id="idNombre" name="primer_nombre" class="myForm">
+Usamos:
+    //////////////////////////////////////////////
+    css = element_name[<attribute_name>='<value>']
+    //////////////////////////////////////////////
+Quedando:
+    driver.findElement(By.cssSelector("input[name='primer_nombre']))
+
+El ejemplo anterior podríamos acceder de la siguiente manera usando la class
+    driver.findElement(By.cssSelector("input.myForm"))

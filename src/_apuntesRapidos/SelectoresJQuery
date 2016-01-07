@@ -1,0 +1,19 @@
+
+http://www.w3schools.com/jquery/jquery_ref_selectors.asp
+
+*                   $("*")              Todos los elementos
+#id                 $("#lastname")	Elementos con id=lastname
+.class              $(".intro")         Elementos con class="intro"
+.class,.class       $(".intro,.demo")	Elementos con class "intro" o "demo"
+element             $("p")              Todos los elementos <p> 
+el1,el2,el3         $("h1,div,p")       Todos los elementos <h1>, <div> y <p> 
+
+first               $("p:first")	El primer elemento <p> 
+:last               $("p:last")         El último elemento <p> 
+:even               $("tr:even")	Todos los elementos pares <tr> 
+:odd                $("tr:odd")         Todos los elementos impares <tr> 
+
+:eq(index)          $("ul li:eq(3)")	El cuarto elemento
+:gt(no)             $("ul li:gt(3)")	Los elemtos de una lista mayores que 3
+:lt(no)             $("ul li:lt(3)")	Los elementos de una lista menores que 3
+:not(selector)      $("input:not(:empty)")	Todos los elementos que no están vacíos
