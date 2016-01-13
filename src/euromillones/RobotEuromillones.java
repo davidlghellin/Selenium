@@ -2,6 +2,7 @@ package euromillones;
 
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -37,6 +38,32 @@ public class RobotEuromillones
 
     public void pintarSemana()
     {
+        
+        //Euromillones - Sorteo 1 del  1 de enero de 2016
+        String text="Euromillones ";
+        JavascriptExecutor  js = (JavascriptExecutor) driver;
+      //  String prueba = "return jQuery('#historicoeuromillones').find('h3:contains(\"Euromillones - Sorteo 2 del 5 de ene\")').text()";
+        String prueba= "return jQuery('#historicoeuromillones').find('h3:contains(\"Euro\")').text()";
+ 
+        String a=(String)js.executeScript(prueba); 
+        System.out.println(a);
+ 
+      //  WebElement obt=(WebElement)js.executeScript(prueba); 
+        //System.out.println(obt);
+        //System.out.println(obt.getTagName());
+       // System.out.println(obt.getLocation());
+        ///
+        
+        
+List<WebElement> divprue = driver.findElements(By.xpath("//li[contains(text(), \"' + 6 + '\")]'"));
+        System.out.println("tamaño"+divprue.size());
+        for (WebElement w : divprue)
+        {
+            System.out.println(w.getText());
+        }
+
+        
+        ////
         WebElement div = driver.findElement(By.id("historicoeuromillones"));
         System.out.println(div.getTagName());
         System.out.println(div.getLocation());
@@ -124,6 +151,7 @@ public class RobotEuromillones
     {
         RobotEuromillones robot = new RobotEuromillones();
         robot.ir();
+        robot.pintarSemana();
         int[][] m = robot.obternerSemana();
         robot.pintar(m);
     }

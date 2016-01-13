@@ -1,0 +1,20 @@
+parent(filter):
+selecionar el padre del que hemos selecionado
+$(selector).parent(filter)
+
+Example
+$(document).ready(function(){
+    $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+
+
+contains():
+Selector contains() selecciona elementos que contengan la cadena especificada.
+La cadena puede estar contenido directamente en el elemento en forma de texto, o en un elemento hijo.
+
+Example
+Select all <p> elements containing "is":
+
+$("p:contains(is)")
+
+

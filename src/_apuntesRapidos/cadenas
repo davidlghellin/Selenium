@@ -1,0 +1,43 @@
+CONCATENACIÓN DE CADENAS
+
+Para poder concatenar o juntar cadenas lo podemos realizar de la siguiente manera
+
+Mediante el Símbolo “+”
+
+Mediante el método “concat”
+    System.out.println(Palabra1.concat(Palabra2));
+
+LONGITUD DE UNA CADENA
+
+La longitud de una cadena podemos obtener con el método length() de la siguiente manera
+
+CADENA A MAYÚSCULA O MINÚSCULA
+
+Si queremos convertir una:
+cadena.toLowerCase()
+cadena.toUpperCase()
+
+CARÁCTER POR INDICE
+Palabra3.charAt(i)
+empezamos por 0
+
+ÍNDICE POR CARÁCTER
+
+Para saber qué posición usa una letra 
+System.out.println(Palabra3.indexOf('e'));
+
+Si pondríamos una palabra completa en el valor enviado nos retornaría el índice del primer carácter de la palabra encontrada, si lo hubiera. Por ejemplo
+
+SUB CADENAS O SUBSTRING
+
+Aquí veamos la forma de obtener cierta porción de una cadena, por ejemplo. Si quisiéramos la palabra longitud de la cadena Palabra3 lo obtendríamos de la siguiente manera
+
+System.out.println(Palabra3.substring(12, Palabra3.length()));
+
+El primer valor dentro de substring es 12 ya que la palabra longitud empieza en ese punto y luego se pasa el valor Palabra3.length lo cual retornaría la longitud de Palabra3 es decir hasta el final así obteniendo la porción que se desea obtener daría el mismo resultado si pondríamos
+
+System.out.println(Palabra3.substring(12, 20));
+
+SPLIT
+separar una adena de carazteres en un array[]
+String[] array = cadena.split(","); //separarmos por ','
